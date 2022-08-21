@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/icons8-coffee-beans-16.png" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="app.js" defer></script>
+    <title>Cafe website template</title>
+  </head>
+  <body>
+
+    <header class="containerBG-image bg-image-0">
+      <div class="containerText text-center">
+        <h1>Cafe Name</h1>
+        <div class="underline"></div>
+        <p>
+          This neat and stylish website will attract more customers to your cafe.
+          The images and text are all customizable and can be tailored to your needs.
+          Not only will you have a great website showing off your business,
+          but ongoing support and updates and your needs change.
+        </p>
+        <div class="links">
+          <a href="#menus">See Menus</a>
+          <a href="#">Make a Booking</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <nav>
+        <h2>Cafe Name</h2>
+        <div class="nav-links">
+          <a href="#find">Find us</a>
+          <a href="#about">About us</a>
+          <a href="#menus">Menus</a>
+        </div>
+          <button class="dropdown-button" onclick="dropdown()">
+            <i class="material-icons">menu</i>
+            Menu
+          </button>
+        <div class="dropdown-links">
+          <a href="#menus">Menus</a>
+          <a href="#find">Find us</a>
+          <a href="#about">About us</a>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="image__background bg-image-1"></div>
+        <div id="menus" class="container__box">
+          <h3>View menus</h3>
+          <p>We have delicious food for Breakfast</p>
+          <a href="/menus/breakfast.pdf">Breakfast menu</a>
+          <p>We have delicious food for Lunch</p>
+          <a href="/menus/lunch.pdf">Lunch menu</a>
+          <p>We have delicious coffee and drinks</p>
+          <a href="/menus/drinks.pdf">Drink menu</a>
+        </div>
+      </div>
+
+      <div class="sub-heading">
+        <h3>Our Services</h3>
+      </div>
+      <div class="container3">
+        <div class="container3__item">
+          <img class="image" src="images/coffee.jpg" alt="img">
+          <p>The best coffee in town</p>
+        </div>
+        <div class="container3__item">
+          <img class="image" src="images/take-away.jpg" alt="img">
+          <p>Dine in and take away</p>
+        </div>
+        <div class="container3__item">
+          <img class="image" src="images/function.jpg" alt="img">
+          <p>Space for functions and groups. We can take your booking!</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="container__box">
+          <h3>Our coffee is the best ever</h3>
+          <p>
+            We have the best coffee in town because we buy the best imported
+            stuff and actually know how to roast it unlike the competition who suck.
+          </p>
+        </div>
+        <div class="image__background bg-image-2"></div>
+      </div>
+
+      <div class="containerBG-image containerBG-image--about bg-image-4">
+        <div id="about" class="containerText text-left">
+          <h3>About us</h3>
+          <p>
+            Here you can tell your customers what sets your business apart and
+            about the background etc. Here you can tell your customers what sets your business apart and
+            about the background etc. Here you can tell your customers what sets your business apart and
+            about the background etc.
+          </p>
+        </div>
+      </div>
+
+      <div id="find" class="sub-heading">
+        <h3>Find us</h3>
+      </div>
+      <div class="container3">
+        <div class="container3__item">
+          <i class="material-icons">add_location</i>
+          <h4>Address</h4>
+          <p>1 Somewhere St, Suburb, City</p>
+        </div>
+        <div class="container3__item">
+          <i class="material-icons">schedule</i>
+          <h4>Opening Hours</h4>
+          <p>8 am to 9pm, Mon - Sat</p>
+        </div>
+        <div class="container3__item">
+          <i class="material-icons">phone</i>
+          <h4>Phone</h4>
+          <p>999 9999</p>
+        </div>
+      </div>
+
+      <div class="mapouter">
+        <div class="gmap_canvas">
+          <iframe width="100%" height="350" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+          </iframe>
+          <!-- map provided by https://www.embedgooglemap.net -->
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="social-icons">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-envelope"></a>
+        <a href="#" class="fa fa-phone"></a>
+      </div>
+      <p>Website created for <em>your business</em> by <a href="#">Michael Godfrey</a>.</p>
+    </footer>
+  </body>
+</html>
