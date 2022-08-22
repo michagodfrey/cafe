@@ -13,12 +13,48 @@ h1, h2, h3 {
   font-family: 'Kaushan Script', cursive;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0 0;
+}
+
+.sub-heading {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* =================================================
+ add on classes
+==================================================== */
+
 .text-center {
   text-align: center;
 }
 
 .text-left {
   text-align: left;
+}
+
+.bg-image-top {
+  background-position: center top;
+}
+
+.bg-image-center {
+  background-position: center center;
+}
+
+.bg-image-bottom {
+  background-position: center bottom;
 }
 
 /* =================================================
@@ -32,7 +68,7 @@ header {
 .underline {
   width: 6rem;
   height: .25rem;
-  background: #49a6e9;
+  background: lightblue;
   margin-left: auto;
   margin-right: auto;
 }
@@ -44,21 +80,16 @@ header {
 
 .links a {
   text-decoration: none;
-  background-color: blue;
+  background-color: #7B68EE;
   color: white;
   padding: 1rem;
+  margin: .5rem;
   font-weight: 600;
   transition: border-radius .8s;
 }
 
 .links a:hover {
   border-radius: 50px;
-}
-
-@media (min-width: 768px) {
-  .containerText {
-    width: 80vw;
-  }
 }
 
 /* =================================================
@@ -81,7 +112,6 @@ nav {
 }
 
 .dropdown-button {
-  background: none;
   border: none;
   cursor: pointer;
   font-weight: 600;
@@ -102,7 +132,8 @@ nav {
   height: 100%;
   overflow: auto;
   background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .dropdown-links a {
@@ -142,28 +173,26 @@ nav {
  containers
 ==================================================== */
 
-.sub-heading {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-}
-
-.containerBG-image {
+.container-bgImage {
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: grid;
 	place-content: center;
+  position: relative;
 }
 
-.containerBG-image--about {
+.container-bgImage--about {
   height: 400px;
   margin: 2rem 0;
 }
 
-.containerText {
-  background-color:rgba(255,255,255,0.5);
+.container-bgImage__text {
+  background-color:rgba(255,255,255,0.8);
   padding: 2rem;
+}
+
+.container {
+  padding: 1.5rem 0;
 }
 
 .container__box {
@@ -174,11 +203,26 @@ nav {
   padding: 1rem
 }
 
+.container__image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100vw;
+  position: relative;
+}
+
 .container3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.container3__image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
 .material-icons {
@@ -189,39 +233,41 @@ nav {
 @media (min-width: 768px) {
   .container {
     display: flex;
+    justify-content: center;
+    padding: 3rem 0;
   }
 
   .container__box {
-    width: 50vw;
+    padding: 0 2rem;
+    max-width: 40vw;
+    margin: 0 1rem;
+  }
+
+  .container__image {
+    max-width: 40vw;
+    margin: 0 1rem;
+  }
+
+  .container-bgImage__text {
+    max-width: 80vw;
   }
 
   .container3 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding: 3rem 1rem;
   }
 
   .container3__item {
     width: 25%;
   }
+
 }
 
 /* =================================================
  images
 ==================================================== */
-
-.image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-
-.image__background {
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 400px;
-  width: 100vw;
-}
 
 .bg-image-0 {
 background-image: url(images/restuarant.jpg);
@@ -239,10 +285,15 @@ background-image: url(images/restuarant.jpg);
  background-image: url(images/about-us.jpg);
 }
 
-@media (min-width: 768px) {
-  .image__background {
-    width: 50vw;
-  }
+.photo-attribution {
+  background-color: lightblue;
+  font-size: .5rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.photo-attribution a {
+  font-size: .5rem;
 }
 
 /* =================================================
@@ -270,11 +321,13 @@ background-image: url(images/restuarant.jpg);
 footer {
   min-height: 300px;
   width: 100vw;
-  background-color: green;
+  background-color: #4e342e;
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  padding: 1rem;
 }
 
 .social-icons {
@@ -292,6 +345,7 @@ footer {
   text-decoration: none;
   border-radius: 50%;
   transform: scale(.75);
+  background-color: #7b5e57;
 }
 
 .fa:hover {
@@ -299,22 +353,26 @@ footer {
 }
 
 .fa-facebook {
-  background: #3B5998;
-  color: black;
+  color: white;
 }
 
 .fa-instagram {
-  background: red;
   color: white;
 }
 
 .fa-envelope {
-  background: red;
   color: white;
 }
 
 .fa-phone {
-  background: white;
-  color: black;
-  border: 1px solid black;
+  color: white;
+}
+
+footer p {
+  margin-bottom: 0;
+  font-size: .75rem;
+}
+
+.attribution:visited {
+  color: #f48fb1;
 }

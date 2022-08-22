@@ -13,20 +13,23 @@
   </head>
   <body>
 
-    <header class="containerBG-image bg-image-0">
-      <div class="containerText text-center">
+    <header class="container-bgImage bg-image-bottom bg-image-0">
+      <div class="container-bgImage__text text-center">
         <h1>Cafe Name</h1>
         <div class="underline"></div>
         <p>
-          This neat and stylish website will attract more customers to your cafe.
-          The images and text are all customizable and can be tailored to your needs.
-          Not only will you have a great website showing off your business,
-          but ongoing support and updates and your needs change.
+          This neat and to-the-point website will attract more customers to your cafe or restuarant.
+          The images, menus and text are all placeholders so they can changed to fit your needs.
+          Here at the top of the page you can introduce the business and prompt potential customers to
+          view your menus or make a booking.
         </p>
         <div class="links">
           <a href="#menus">See Menus</a>
-          <a href="#">Make a Booking</a>
+          <a href="/booking.html">Make a Booking</a>
         </div>
+      </div>
+      <div class="photo-attribution">
+        Photo by <a href="https://unsplash.com/@nhillier?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"> Nick Hillier</a>
       </div>
     </header>
 
@@ -38,26 +41,31 @@
           <a href="#about">About us</a>
           <a href="#menus">Menus</a>
         </div>
-          <button class="dropdown-button" onclick="dropdown()">
+          <div class="dropdown-button" onclick="dropdown()">
             <i class="material-icons">menu</i>
             Menu
-          </button>
-        <div class="dropdown-links">
+          </div>
+          <div class="dropdown-links">
           <a href="#menus">Menus</a>
+          <a href="#">Make a Booking</a>
           <a href="#find">Find us</a>
           <a href="#about">About us</a>
         </div>
       </nav>
 
       <div class="container">
-        <div class="image__background bg-image-1"></div>
+        <div class="container__image bg-image-center bg-image-1">
+          <div class="photo-attribution">
+            Photo by <a href="https://www.foodiesfeed.com/author/framed_by_rania/">Rania Alhamed</a>
+          </div>
+        </div>
         <div id="menus" class="container__box">
           <h3>View menus</h3>
-          <p>We have delicious food for Breakfast</p>
+          <p>Change these descriptions depending on your business</p>
           <a href="/menus/breakfast.pdf">Breakfast menu</a>
-          <p>We have delicious food for Lunch</p>
+          <p>Add your own menus to these links.</p>
           <a href="/menus/lunch.pdf">Lunch menu</a>
-          <p>We have delicious coffee and drinks</p>
+          <p>Update them easily as your menus and services change!</p>
           <a href="/menus/drinks.pdf">Drink menu</a>
         </div>
       </div>
@@ -67,16 +75,16 @@
       </div>
       <div class="container3">
         <div class="container3__item">
-          <img class="image" src="images/coffee.jpg" alt="img">
-          <p>The best coffee in town</p>
+          <img class="container3__image" src="images/coffee.jpg" alt="img">
+          <p>Let customers know what your business does best.</p>
         </div>
         <div class="container3__item">
-          <img class="image" src="images/take-away.jpg" alt="img">
-          <p>Dine in and take away</p>
+          <img class="container3__image" src="images/take-away.jpg" alt="img">
+          <p>Dine in, take away or both? Let your people know what's offered.</p>
         </div>
         <div class="container3__item">
-          <img class="image" src="images/function.jpg" alt="img">
-          <p>Space for functions and groups. We can take your booking!</p>
+          <img class="container3__image" src="images/function.jpg" alt="img">
+          <p>Do you take reservations? Let the world know and make it a call to action.</p>
         </div>
       </div>
 
@@ -84,22 +92,29 @@
         <div class="container__box">
           <h3>Our coffee is the best ever</h3>
           <p>
-            We have the best coffee in town because we buy the best imported
-            stuff and actually know how to roast it unlike the competition who suck.
+            What is it that sets your business apart from the competition? The best coffee roasting in town?
+            Specialty foods hard to find elsewhere locally? Or maybe just awesome service with a personal touch?
+            Here you can show off what makes your business special.
           </p>
         </div>
-        <div class="image__background bg-image-2"></div>
+        <div class="container__image bg-image-center bg-image-2">
+          <div class="photo-attribution">
+            Photo by <a href="https://www.foodiesfeed.com/author/jakubkapusnak/">Jakub Kapusnak</a>
+          </div>
+        </div>
       </div>
 
-      <div class="containerBG-image containerBG-image--about bg-image-4">
-        <div id="about" class="containerText text-left">
+      <div class="container-bgImage container-bgImage--about bg-image-top bg-image-4">
+        <div id="about" class="container-bgImage__text text-left">
           <h3>About us</h3>
           <p>
-            Here you can tell your customers what sets your business apart and
-            about the background etc. Here you can tell your customers what sets your business apart and
-            about the background etc. Here you can tell your customers what sets your business apart and
-            about the background etc.
+            Does your business have a story to tell? Is it long established well known locally or an exciting new startup?
+            Wherever you are coming from, you can add a personal touch by letting customers know what is unique about your business.
+            This is where you tell the story of the business and further connect with customers.
           </p>
+        </div>
+        <div class="photo-attribution">
+          Photo by <a href="https://unsplash.com/@clemono?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Clem Onojeghuo</a>
         </div>
       </div>
 
@@ -120,7 +135,7 @@
         <div class="container3__item">
           <i class="material-icons">phone</i>
           <h4>Phone</h4>
-          <p>999 9999</p>
+          <p>(+99) 9 9999 9999</p>
         </div>
       </div>
 
@@ -128,18 +143,21 @@
         <div class="gmap_canvas">
           <iframe width="100%" height="350" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
           </iframe>
-          <!-- map provided by https://www.embedgooglemap.net -->
         </div>
       </div>
     </main>
+
     <footer>
       <div class="social-icons">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-envelope"></a>
-        <a href="#" class="fa fa-phone"></a>
+        <a href="https://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com" target="_blank" class="fa fa-instagram"></a>
+        <a href="mailto: email@email.com" class="fa fa-envelope"></a>
+        <a href="tel:9999999" class="fa fa-phone"></a>
       </div>
-      <p>Website created for <em>your business</em> by <a href="#">Michael Godfrey</a>.</p>
+      <p>Website created for <em>your business</em> by <a class="attribution" href="https://github.com/michagodfrey/cafe">Michael Godfrey</a>.</p>
+      <p>All placeholder images from <a class="attribution" href="https://www.foodiesfeed.com/">Foodiesfeed</a> and <a class="attribution" href="https://unsplash.com/">Unsplash</a>. All photos in 'Our Services' section by <a class="attribution" href="https://www.foodiesfeed.com/author/jakubkapusnak/">Jakub Kapusnak</a>.</p>
+      <p>All sample menus from <a class="attribution" href="https://www.canva.com/menus/templates/">Canva</a>.</p>
+      <p>Map provided by <a class="attribution" href="https://www.embedgooglemap.net">Embed Google Map</a>.</p>
     </footer>
   </body>
 </html>
