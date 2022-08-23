@@ -225,6 +225,16 @@ nav {
   border-radius: 50%;
 }
 
+.attribution--container {
+  font-size: .5rem;
+  text-align: center;
+  transform: translateY(-2rem);
+}
+
+.attribution--container a {
+  font-size: .5rem;
+}
+
 .material-icons {
   font-size: 60px;
   color: lightblue;
@@ -263,6 +273,10 @@ nav {
     width: 25%;
   }
 
+  .attribution--container {
+    transform: translateY(-3rem);
+  }
+
 }
 
 /* =================================================
@@ -285,14 +299,14 @@ background-image: url(images/restuarant.jpg);
  background-image: url(images/about-us.jpg);
 }
 
-.photo-attribution {
+.attribution--photo {
   background-color: lightblue;
   font-size: .5rem;
   position: absolute;
   bottom: 0;
 }
 
-.photo-attribution a {
+.attribution--photo a {
   font-size: .5rem;
 }
 
@@ -373,6 +387,10 @@ footer p {
   font-size: .75rem;
 }
 
-.attribution:visited {
+.attribution--footer {
+  color: white;
+}
+
+.attribution--footer:visited {
   color: #f48fb1;
 }
