@@ -121,31 +121,75 @@
         </div>
       </div>
 
+
       <div id="find" class="sub-heading">
         <h3>Find us</h3>
       </div>
-      <div class="container3">
-        <div class="container3__item">
-          <i class="material-icons">add_location</i>
-          <h4>Address</h4>
-          <p>1 Somewhere St, Suburb, City</p>
+
+      <div class="slide-controller">
+        <div class="plus-container">
+          <div class="plus" onclick="plusLoc(-1)">&#10094;</div>
+          <div class="plus" onclick="plusLoc(1)">&#10095;</div>
         </div>
-        <div class="container3__item">
-          <i class="material-icons">schedule</i>
-          <h4>Opening Hours</h4>
-          <p>8 am to 9pm, Mon - Sat</p>
-        </div>
-        <div class="container3__item">
-          <i class="material-icons">phone</i>
-          <h4>Phone</h4>
-          <p>(+99) 9 9999 9999</p>
+        <div class="dot-container">
+          <span class="dot" onclick="currentLoc(1)"></span>
+          <span class="dot" onclick="currentLoc(2)"></span>
         </div>
       </div>
 
-      <div class="mapouter">
-        <div class="gmap_canvas">
-          <iframe width="100%" height="350" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-          </iframe>
+      <div class="slideContainer">
+        <div class="locationSlide">
+          <div class="container3">
+            <div class="container3__item">
+              <i class="material-icons">add_location</i>
+              <h4>Address</h4>
+              <p>1 Somewhere St, Suburb, City</p>
+            </div>
+            <div class="container3__item">
+              <i class="material-icons">schedule</i>
+              <h4>Opening Hours</h4>
+              <p>8 am to 9pm, Mon - Sat</p>
+            </div>
+            <div class="container3__item">
+              <i class="material-icons">phone</i>
+              <h4>Phone</h4>
+              <p>(+99) 9 9999 9999</p>
+            </div>
+          </div>
+
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe width="100%" height="350" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="locationSlide">
+          <div class="container3">
+            <div class="container3__item">
+              <i class="material-icons">add_location</i>
+              <h4>Address</h4>
+              <p>5 Another Rd, Suburb, City</p>
+            </div>
+            <div class="container3__item">
+              <i class="material-icons">schedule</i>
+              <h4>Opening Hours</h4>
+              <p>8 am to 3pm</p>
+            </div>
+            <div class="container3__item">
+              <i class="material-icons">phone</i>
+              <h4>Phone</h4>
+              <p>(+99) 9 9999 9999</p>
+            </div>
+          </div>
+
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe width="100%" height="350" src="https://maps.google.com/maps?q=suva%20fjij&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+              </iframe>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -160,11 +204,11 @@
       <p>Website created for <em>your business</em> by <a class="attribution--footer" href="https://github.com/michagodfrey/cafe">Michael Godfrey</a>.</p>
       <p>
         All placeholder images from
-        <a class="attribution--footer" href="https://www.foodiesfeed.com/">Foodiesfeed</a>
-        and <a class="attribution--footer" href="https://unsplash.com/">Unsplash</a>.
+        <a class="attribution--footer" href="https://www.foodiesfeed.com/" target="_blank">Foodiesfeed</a>
+        and <a class="attribution--footer" href="https://unsplash.com/" target="_blank">Unsplash</a>.
       </p>
-      <p>All sample menus from <a class="attribution--footer" href="https://www.canva.com/menus/templates/">Canva</a>.</p>
-      <p>Map provided by <a class="attribution--footer" href="https://www.embedgooglemap.net">Embed Google Map</a>.</p>
+      <p>All sample menus from <a class="attribution--footer" href="https://www.canva.com/menus/templates/" target="_blank">Canva</a>.</p>
+      <p>Map provided by <a class="attribution--footer" href="https://www.embedgooglemap.net" target="_blank">Embed Google Map</a>.</p>
     </footer>
   </body>
 </html>

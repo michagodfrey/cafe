@@ -329,6 +329,39 @@ background-image: url(images/restuarant.jpg);
 }
 
 /* =================================================
+ location slider
+==================================================== */
+
+.plus-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.plus {
+  font-size: 2rem;
+  margin: 0 2rem;
+  cursor: pointer;
+}
+
+.dot-container {
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  margin: .5rem;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.active {
+  background-color: #777;
+}
+
+/* =================================================
  footer
 ==================================================== */
 

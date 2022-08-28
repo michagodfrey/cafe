@@ -1,7 +1,3 @@
-// todo email booking services
-
-// todo slider for locations
-
 // dropdown menu
 function dropdown() {
   document.querySelector(".dropdown-links").classList.toggle("show");
@@ -17,4 +13,43 @@ window.onclick = function(event) {
       }
     }
   }
+}
+
+// location slider
+let slideIndex = 1;
+
+showLocation(slideIndex);
+
+function plusLoc(n) {
+  showLocation(slideIndex += n);
+}
+
+function showLocation(n) {
+  const slide = document.getElementsByClassName("locationSlide");
+  if (n > slide.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slide.length}
+  for (let i = 0; i < slide.length; i++) {
+    slide[i].style.display = "none";
+  }
+  slide[slideIndex-1].style.display = "block";
+}
+
+function currenLoc(n) {
+  showLocation(slideIndex = n);
+}
+
+function showLocation(n) {
+
+  const slide = document.getElementsByClassName("locationSlide");
+  const dots = document.getElementsByClassName("dot");
+  if (n > slide.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slide.length}
+  for (let i = 0; i < slide.length; i++) {
+    slide[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace("active", "");
+  }
+  slide[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
