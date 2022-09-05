@@ -1,24 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:ital,wght@0,400;0,600;1,300&display=swap');
-
-/* variables to make, color primary, color secondary, color text, color titles, color links, break point */
+@import url('https://fonts.googleapis.com/css2?family=Gelasio&family=Pacifico&family=Poppins&display=swap');
 
 * {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
+  color: #333;
   scroll-behavior: smooth;
 }
 
-h1, h2, h3 {
-  font-family: 'Kaushan Script', cursive;
+.wrapper {
+  max-width: 1600px;
+  margin: auto;
+}
+
+:root {
+  --color-primary: #A0522D;
+}
+
+
+
+/* =================================================
+ text styles
+==================================================== */
+
+h1, h3 {
+  font-family: 'Pacifico', cursive;
+  font-weight: lighter;
+  color: #333;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 0;
 }
 
 h2 {
-  font-size: 2rem;
+  font-family: 'Pacifico', cursive;
+  font-weight: lighter;
+  color: white;
 }
 
 h3 {
@@ -26,11 +44,65 @@ h3 {
   margin: 1rem 0 0;
 }
 
+.title-mobile {
+  font-size: 1rem;
+  color: white;
+}
+
+.title-mobile span {
+  font-family: 'Gelasio', serif;
+  font-weight: lighter;
+  color: white;
+}
+
+.title-desktop {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.title-desktop span {
+  font-size: 1.5rem;
+  font-family: 'Gelasio', serif;
+  font-weight: lighter;
+  padding: .125rem .25rem 0 0;
+  color: white;
+}
+
 .sub-heading {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
   width: 100%;
+  padding: .5rem;
+}
+
+.sub-heading .material-icons {
+  color: var(--color-primary)
+}
+
+.underline {
+  width: 4rem;
+  height: .25rem;
+  margin: 1.25rem auto 0;
+  background: var(--color-primary);
+}
+
+/* text media queries */
+
+@media (min-width: 768px) {
+  .title-mobile {
+    display: none;
+  }
+
+  .title-desktop {
+    display: flex;
+  }
+
+  .sub-heading {
+    font-size: 1.5rem;
+  }
 }
 
 /* =================================================
@@ -62,34 +134,10 @@ h3 {
 ==================================================== */
 
 header {
-  height: 90vh;
-}
-
-.underline {
-  width: 6rem;
-  height: .25rem;
-  background: lightblue;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.links {
-  display: flex;
-  justify-content: space-around;
-}
-
-.links a {
-  text-decoration: none;
-  background-color: #7B68EE;
-  color: white;
-  padding: 1rem;
-  margin: .5rem;
-  font-weight: 600;
-  transition: border-radius .8s;
-}
-
-.links a:hover {
-  border-radius: 50px;
+  width: 100%;
+  height: 50vw;
+  max-height: 800px;
+  background-image: url(images/ech-banner.jpg);
 }
 
 /* =================================================
@@ -100,6 +148,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+  background-color: var(--color-primary)
 }
 
 .nav-links {
@@ -115,10 +164,17 @@ nav {
   border: none;
   cursor: pointer;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+}
+
+.dropdown-button .material-icons {
+  color: white;
+  font-size: 40px;
+  padding-bottom: .25rem;
 }
 
 .dropdown-links {
@@ -149,22 +205,26 @@ nav {
 
 @media (min-width: 768px) {
 
-nav {
-  justify-content: space-evenly;
-}
-
 .nav-links {
   display: flex;
   align-items: center;
 }
 
 .nav-links a {
-  margin: 0 1.5rem;
+  color: white;
+  margin: 0 1.25rem;
 }
 
 .dropdown-button {
   display: none;
 }
+}
+
+@media (min-width: 1024px) {
+  .nav-links a {
+    margin: 0 2.5rem;
+    font-size: 1.5rem;
+  }
 }
 
 /* =================================================
@@ -209,6 +269,11 @@ nav {
   position: relative;
 }
 
+.alt-row {
+  background-color: var(--color-primary);
+  color: white;
+}
+
 .container3 {
   display: flex;
   flex-direction: column;
@@ -223,6 +288,16 @@ nav {
   border-radius: 50%;
 }
 
+.container3__item .material-icons {
+  color: var(--color-primary);
+  font-size: 60px;
+}
+
+.container3__item--alt .material-icons {
+  color: white;
+  font-size: 60px;
+}
+
 .attribution--container {
   font-size: .5rem;
   text-align: center;
@@ -231,11 +306,6 @@ nav {
 
 .attribution--container a {
   font-size: .5rem;
-}
-
-.material-icons {
-  font-size: 60px;
-  color: lightblue;
 }
 
 @media (min-width: 768px) {
@@ -264,10 +334,10 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 3rem 1rem;
+    /* padding: 3rem 1rem; */
   }
 
-  .container3__item {
+  .container3__item, .container3__item--alt {
     width: 25%;
   }
 
@@ -281,10 +351,6 @@ nav {
  images
 ==================================================== */
 
-.bg-image-0 {
-background-image: url(images/restuarant.jpg);
-}
-
 .bg-image-1 {
   background-image: url(images/burgers.jpg);
 }
@@ -297,16 +363,88 @@ background-image: url(images/restuarant.jpg);
  background-image: url(images/about-us.jpg);
 }
 
-.attribution--photo {
-  background-color: lightblue;
-  font-size: .5rem;
-  position: absolute;
-  bottom: 0;
+/* =================================================
+ location slider
+==================================================== */
+
+.slide-controller {
+  margin: 0;
+  padding: 0;
 }
 
-.attribution--photo a {
-  font-size: .5rem;
+.plus-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 }
+
+.plus {
+  font-size: 2rem;
+  margin: 0 2rem;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.loc-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.loc {
+  margin: .5rem;
+  cursor: pointer;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-9-6 11:17:9
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+ /**
+  * ----------------------------------------
+  * animation slide-in-left
+  * ----------------------------------------
+  */
+
+  .slide-in-left {
+ 	-webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+ 	        animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+ }
+
+ @-webkit-keyframes slide-in-left {
+   0% {
+     -webkit-transform: translateX(-1000px);
+             transform: translateX(-1000px);
+     opacity: 0;
+   }
+   100% {
+     -webkit-transform: translateX(0);
+             transform: translateX(0);
+     opacity: 1;
+   }
+ }
+ @keyframes slide-in-left {
+   0% {
+     -webkit-transform: translateX(-1000px);
+             transform: translateX(-1000px);
+     opacity: 0;
+   }
+   100% {
+     -webkit-transform: translateX(0);
+             transform: translateX(0);
+     opacity: 1;
+   }
+ }
 
 /* =================================================
  map
@@ -316,49 +454,12 @@ background-image: url(images/restuarant.jpg);
   position:relative;
   text-align:right;
   height:350px;
-  width:100vw;
 }
 
 .gmap_canvas {
   overflow:hidden;
   background:none;
   height:350px;
-  width:100vw;
-}
-
-/* =================================================
- location slider
-==================================================== */
-
-.plus-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.plus {
-  font-size: 2rem;
-  margin: 0 2rem;
-  cursor: pointer;
-}
-
-.dot-container {
-  display: flex;
-  justify-content: center;
-}
-
-.dot {
-  /* height: 25px;
-  width: 25px; */
-  margin: .5rem;
-  cursor: pointer;
-  /* background-color: transparent; */
-  /* border: 1px solid black; */
-  /* border-radius: 50%; */
-}
-
-.active {
-  /* background-color: #777; */
-  text-decoration: underline;
 }
 
 /* =================================================
@@ -367,8 +468,7 @@ background-image: url(images/restuarant.jpg);
 
 footer {
   min-height: 300px;
-  width: 100vw;
-  background-color: #4e342e;
+  background-color: var(--color-primary);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -392,7 +492,7 @@ footer {
   text-decoration: none;
   border-radius: 50%;
   transform: scale(.75);
-  background-color: #7b5e57;
+  background-color: white;
 }
 
 .fa:hover {
@@ -400,30 +500,36 @@ footer {
 }
 
 .fa-facebook {
-  color: white;
+  color: var(--color-primary);
 }
 
 .fa-instagram {
-  color: white;
+  color: var(--color-primary);
 }
 
 .fa-envelope {
-  color: white;
+  color: var(--color-primary);
 }
 
 .fa-phone {
-  color: white;
+  color: var(--color-primary);
 }
 
 footer p {
   margin-bottom: 0;
   font-size: .75rem;
+  color: white;
+}
+
+footer em {
+  color: white;
 }
 
 .attribution--footer {
+  font-size: .75rem;
   color: white;
 }
 
 .attribution--footer:visited {
-  color: #f48fb1;
+  color: white;
 }
