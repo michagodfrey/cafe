@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="images/icons8-coffee-beans-16.png" />
+    <link rel="icon" type="image/x-icon" href="images/icons8-coffee-32.png" />
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="stylesheet.css" />
@@ -13,22 +13,21 @@
     <title>Ethan's Coffee Heaven</title>
   </head>
   <body>
-    <div class="wrapper">
 
-    <header class="container-bgImage bg-image-top">
-      <h1>Ethan's Coffee Heaven</h1>
+    <header>
+      <div class="header-bg background-image"></div>
     </header>
 
-    <main>
-      <nav>
-        <h2 class="title-mobile">
+    <nav>
+      <div class="nav-content">
+        <h1 class="title-mobile">
           <span>ETHAN'S</span>
           <br>
           Coffee Heaven
-        </h2>
-        <h2 class="title-desktop">
+        </h1>
+        <h1 class="title-desktop">
           <span>ETHAN'S </span>Coffee Heaven
-        </h2>
+        </h1>
         <div class="nav-links">
           <a href="#menus">Menus</a>
           <a href="#find">Locations</a>
@@ -43,105 +42,127 @@
           <a href="#find">Locations</a>
           <a href="#about">About</a>
         </div>
-      </nav>
+      </div>
+    </nav>
 
+    <main>
+      <div class="construction-msg">
+        <b>
+          !! Page under construction and incomplete. Please come back and visit soon. !!
+        </b>
+      </div>
+      <!-- menus section -->
       <div class="container">
-        <div class="container__image bg-image-center bg-image-1">
-
-        </div>
-        <div id="menus" class="container__box">
+        <div id="menus" class="container__content">
           <h3>Menus</h3>
+          <div class="underline"></div>
+          <p>The best coffee in town and delicious smoothies.</p>
+          <a href="menus/drinks.pdf" class="container__link">Drinks</a>
           <p>Delicious breakfast to start your day.</p>
-          <a href="menus/breakfast.pdf">Breakfast menu</a>
-          <p>We also have a lunch menu.</p>
-          <a href="menus/lunch.pdf">Lunch menu</a>
-          <p>The best coffee in town or try our delicious smoothies.</p>
-          <a href="menus/drinks.pdf">Drink menu</a>
+          <a href="menus/breakfast.pdf" class="container__link">Breakfast</a>
+          <p>Fijian, Indian and international food.</p>
+          <a href="menus/lunch.pdf" class="container__link">Main menu</a>
         </div>
+
+        <div class="container__image image-menu"></div>
       </div>
 
+      <!-- services section -->
       <div class="sub-heading">
-        <h3>Our Services</h3>
+        <h3>Services</h3>
+        <div class="underline"></div>
+        <p>Coffee, drinks, breakfast, and lunch</p>
       </div>
-      <div class="container3">
-        <div class="container3__item">
-          <img class="container3__image" src="images/coffee.jpg" alt="img" />
+      <div class="list">
+        <div class="list__item">
+          <img class="list__image" src="images/6-coffees.jpg" alt="img" />
           <p>Best coffee in town</p>
         </div>
-        <div class="container3__item">
-          <img class="container3__image" src="images/take-away.jpg" alt="img" />
-          <p>Dine in and take away</p>
+        <div class="list__item">
+          <img class="list__image" src="images/birthday.jpg" alt="img" />
+          <p>Orders for special occasions </p>
         </div>
-        <div class="container3__item">
-          <img class="container3__image" src="images/function.jpg" alt="img" />
+        <div class="list__item">
+          <img class="list__image" src="images/function.jpg" alt="img" />
           <p>Catering for groups and events</p>
         </div>
       </div>
 
+      <!-- promotion section -->
       <div class="container">
-        <div class="container__box">
-          <h3>Not just coffee, our food is the best in town too!</h3>
+        <div class="container__content">
+          <h3>A taste of Fiji and the world</h3>
+          <div class="underline"></div>
           <p>
-            Jelly sweet roll jelly beans biscuit pie macaroon chocolate donut. Carrot cake caramels pie sweet apple pie tiramisu carrot cake. Marzipan marshmallow croissant tootsie roll lollipop. Cupcake lemon drops bear claw gummies. Jelly bear claw gummi bears lollipop cotton candy gummi bears chocolate bar cake cookie. Cupcake muffin danish muffin cookie gummies. Jelly beans tiramisu pudding. Toffee soufflé chocolate cake pastry brownie. Oat cake halvah sweet roll cotton candy croissant lollipop. Macaroon tiramisu chocolate bar candy candy carrot cake jelly sweet. Gummies croissant macaroon dessert. Chocolate cake dragée pie.
+            One family-owned company, two locations, same superb service.
+            The Ethan's Coffee Heaven cafes, with locations in Labasa and Savusavu, are well-known for serving the best coffee in town.
+          </P>
+          <p>
+            Ethan's Coffee Heaven offers a good selection of traditional Fijian, Indian, and foreign foods in addition to its excellent coffee.
+            It is popular with locals and visitors for the great menu and friendly service.
           </p>
         </div>
-        <div class="container__image bg-image-center bg-image-2">
+        <div class="container__image bg-image-2">
 
         </div>
       </div>
 
-      <div class="container-bgImage container-bgImage--about bg-image-top bg-image-4">
-        <div id="about" class="container-bgImage__text text-left">
+      <!-- locations section -->
+      <div id="find" class="sub-heading">
+        <h3>Locations</h3>
+        <div class="underline"></div>
+      </div>
+
+      <div class="list">
+        <div class="list__item">
+          <h4>Labasa</h4>
+          <i class="material-icons">add_location</i>
+          <p>Galaxy Complex, Ritova Street Nasekula Road Labasa, Fiji</p>
+          <a href="https://goo.gl/maps/W3WRp2yxHWgXkEPb6" target="_blank">Get directions</a>
+          <p>
+            <a href="https://www.facebook.com/ethanscoffee" target="_blank"><img class="list__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" /></a>
+          </p>
+          <p>
+            <a href="tel:8082204">
+              <i class="material-icons">phone</i>
+            </a>
+          </p>
+        </div>
+
+        <div class="list__item">
+          <h4>Savusavu</h4>
+          <i class="material-icons">add_location</i>
+          <p>Lesiaceva Road Savusavu, Fiji</p>
+          <a href="https://goo.gl/maps/5TaNHcMp7vLTM4VM9" target="_blank">Get directions</a>
+          <p>
+            <p>
+              <a href="https://www.facebook.com/profile.php?id=100064196137922" target="_blank"><img class="list__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" /></a>
+            </p>
+            <a href="tel:9078562">
+              <i class="material-icons">phone</i>
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- about section -->
+      <div class="background-image background-image--about image-about">
+        <div id="about" class="background-image__text text-left">
           <h3>About us</h3>
           <p>
             Next level tbh everyday carry, blog copper mug forage kitsch roof party pickled hammock kale chips tofu. Etsy shoreditch 8-bit microdosing, XOXO viral butcher banh mi humblebrag listicle woke bicycle rights brunch before they sold out ramps. Twee shabby chic taiyaki flannel, enamel pin venmo vape four loko. Hexagon kale chips typewriter kitsch 8-bit organic plaid small batch keffiyeh ethical banh mi narwhal echo park cronut.
           </p>
         </div>
       </div>
-
-      <div id="find" class="sub-heading">
-        <h3>Locations</h3>
-        <div class="underline"></div>
-        <span class="margin-top">Suva, Labasa & SavuSavu</span>
-      </div>
-
-      <div class="container3">
-        <div class="container3__item">
-          <i class="material-icons">add_location</i>
-          <p>15 Butt St Suva, Fiji</p>
-          <p>
-            <a href="https://www.facebook.com/ethans.coffeeheaven" target="_blank"><img class="svg-fb" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" /></a>
-          </p>
-           <a href="https://goo.gl/maps/Y2QWecddgfXEsXAV7" target="_blank">Get directions</a>
-        </div>
-        <div class="container3__item">
-          <i class="material-icons">add_location</i>
-          <p>Galaxy Complex, Ritova Street Nasekula Road Labasa, Fiji</p>
-          <p>
-            <a href="https://www.facebook.com/ethanscoffee" target="_blank"><img class="svg-fb" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" /></a>
-          </p>
-          <a href="https://goo.gl/maps/W3WRp2yxHWgXkEPb6" target="_blank">Get directions</a>
-        </div>
-        <div class="container3__item">
-          <i class="material-icons">add_location</i>
-          <p>Lesiaceva Road SavuSavu, Fiji</p>
-          <p>
-            <a href="https://www.facebook.com/profile.php?id=100064196137922" target="_blank"><img class="svg-fb" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" /></a>
-          </p>
-          <a href="https://goo.gl/maps/5TaNHcMp7vLTM4VM9" target="_blank">Get directions</a>
-        </div>
-      </div>
-
     </main>
 
     <footer>
       <div class="social-icons">
         <a href="https://www.facebook.com/ethanscoffee" target="_blank" class="fa fa-facebook"></a>
         <a href="https://www.instagram.com/ethanscoffeeheaven/?hl=en" target="_blank" class="fa fa-instagram"></a>
-        <a href="tel:90499579" class="fa fa-phone"></a>
+        <a href="mailto:shareenainvestment@gmail.com" class="fa fa-envelope"></a>
       </div>
       <p>Website created for <em>Ethan's Coffee Heaven</em> by <a class="attribution--footer" href="https://github.com/michagodfrey/cafe">Michael Godfrey</a>.</p>
     </footer>
-    </div>
   </body>
 </html>

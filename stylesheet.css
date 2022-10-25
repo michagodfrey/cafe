@@ -8,13 +8,14 @@
   scroll-behavior: smooth;
 }
 
-.wrapper {
-  max-width: 1600px;
-  margin: auto;
-}
-
 :root {
   --color-primary: #A0522D;
+}
+
+.construction-msg {
+  padding: 1rem;
+  background-color: yellow;
+  text-align: center;
 }
 
 /* =================================================
@@ -25,10 +26,6 @@ h1, h3 {
   font-family: 'Pacifico', cursive;
   font-weight: lighter;
   color: #333;
-}
-
-h1 {
-  font-size: 0;
 }
 
 h2 {
@@ -83,7 +80,7 @@ h3 {
 .underline {
   width: 4rem;
   height: .25rem;
-  margin: 1.25rem auto 0;
+  margin: 1rem auto 0;
   background: var(--color-primary);
 }
 
@@ -115,20 +112,20 @@ h3 {
   text-align: left;
 }
 
-.bg-image-top {
-  background-position: center top;
+/* =================================================
+ images
+==================================================== */
+
+.image-menu {
+  background-image: url(images/6-coffees.jpg);
 }
 
-.bg-image-center {
-  background-position: center center;
+.bg-image-2 {
+  background-image: url(images/lobster.jpeg);
 }
 
-.bg-image-bottom {
-  background-position: center bottom;
-}
-
-.margin-top {
-  margin-top: 1.5rem;
+.image-about {
+  background-image: url(images/about.jpg);
 }
 
 /* =================================================
@@ -136,9 +133,15 @@ h3 {
 ==================================================== */
 
 header {
+  background-color: var(--color-primary);
+}
+
+.header-bg {
   width: 100%;
+  max-width: 1600px;
   height: 50vw;
   max-height: 800px;
+  margin: auto;
   background-image: url(images/ech-banner.jpg);
 }
 
@@ -147,10 +150,15 @@ header {
 ==================================================== */
 
 nav {
+  background-color: var(--color-primary)
+}
+
+.nav-content {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  background-color: var(--color-primary)
+  max-width: 1600px;
+  margin: auto;
 }
 
 .nav-links {
@@ -205,6 +213,8 @@ nav {
   text-align: center;
 }
 
+/* navigation media queires */
+
 @media (min-width: 768px) {
 
 .nav-links {
@@ -230,32 +240,20 @@ nav {
 }
 
 /* =================================================
- containers
+ main
 ==================================================== */
 
-.container-bgImage {
-	background-repeat: no-repeat;
-	background-size: cover;
-	display: grid;
-	place-content: center;
-  position: relative;
+main {
+  max-width: 1600px;
+  margin: auto;
 }
 
-.container-bgImage--about {
-  height: 400px;
-  margin: 2rem 0;
-}
-
-.container-bgImage__text {
-  background-color:rgba(255,255,255,0.8);
-  padding: 2rem;
-}
-
+/* main content container */
 .container {
   padding: 1.5rem 0;
 }
 
-.container__box {
+.container__content {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -266,17 +264,42 @@ nav {
 .container__image {
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   height: 400px;
   width: 100vw;
   position: relative;
 }
 
-.alt-row {
+.container__link {
   background-color: var(--color-primary);
-  color: white;
+  color: #fff;
+  padding: .5rem;
+  border-radius: 1rem;
+  width: 200px;
+  margin: auto;
 }
 
-.container3 {
+/* container with background images */
+.background-image {
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: grid;
+	place-content: center;
+  position: relative;
+}
+
+.background-image--about {
+  height: 400px;
+  margin: 2rem 0;
+}
+
+.background-image__text {
+  background-color:rgba(255,255,255,0.8);
+  padding: 2rem;
+}
+
+/* container with items */
+.list {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -284,32 +307,26 @@ nav {
   padding: 1.5rem 1rem;
 }
 
-.container3__image {
-  width: 150px;
-  height: 150px;
+.list__image {
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 
-.container3__item .material-icons {
+.list__item {
+  border: 1px solid var(--color-primary);
+}
+
+.list__item .material-icons {
   color: var(--color-primary);
   font-size: 60px;
 }
 
-.container3__item--alt .material-icons {
-  color: white;
-  font-size: 60px;
+.list__icon {
+  max-height: 50px;
 }
 
-.attribution--container {
-  font-size: .5rem;
-  text-align: center;
-  transform: translateY(-2rem);
-}
-
-.attribution--container a {
-  font-size: .5rem;
-}
-
+/* main content media queries */
 @media (min-width: 768px) {
   .container {
     display: flex;
@@ -317,7 +334,7 @@ nav {
     padding: 3rem 0;
   }
 
-  .container__box {
+  .container__content {
     padding: 0 2rem;
     max-width: 40vw;
     margin: 0 1rem;
@@ -328,44 +345,20 @@ nav {
     margin: 0 1rem;
   }
 
-  .container-bgImage__text {
+  .background-image__text {
     max-width: 80vw;
   }
 
-  .container3 {
+  .list {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
 
-  .container3__item, .container3__item--alt {
+  .list__item {
     width: 25%;
   }
 
-  .attribution--container {
-    transform: translateY(-3rem);
-  }
-
-}
-
-/* =================================================
- images
-==================================================== */
-
-.bg-image-1 {
-  background-image: url(images/lobster.jpeg);
-}
-
-.bg-image-2 {
-  background-image: url(images/curry.jpeg);
-}
-
-.bg-image-4 {
-  background-image: url(images/breakfast.jpeg);
-}
-
-.svg-fb {
-  max-height: 50px;
 }
 
 /* =================================================
@@ -373,7 +366,7 @@ nav {
 ==================================================== */
 
 footer {
-  min-height: 300px;
+  min-height: 200px;
   background-color: var(--color-primary);
   color: #fff;
   display: flex;
@@ -399,26 +392,11 @@ footer {
   border-radius: 50%;
   transform: scale(.75);
   background-color: white;
+  color: var(--color-primary);
 }
 
 .fa:hover {
     opacity: 0.7;
-}
-
-.fa-facebook {
-  color: var(--color-primary);
-}
-
-.fa-instagram {
-  color: var(--color-primary);
-}
-
-.fa-envelope {
-  color: var(--color-primary);
-}
-
-.fa-phone {
-  color: var(--color-primary);
 }
 
 footer p {
