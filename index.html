@@ -2,20 +2,21 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="images/icons8-coffee-32.png" />
-    <link rel="stylesheet" href="normalize.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/icons8-coffee-32.png">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <script src="app.js" defer></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0" nonce="LDFc83V6"></script>
     <title>Ethan's Coffee Heaven</title>
   </head>
   <body>
 
     <header>
-      <div class="header-bg background-image"></div>
+      <div class="header-banner"></div>
     </header>
 
     <nav>
@@ -30,8 +31,8 @@
         </h1>
         <div class="nav-links">
           <a href="#menus">Menus</a>
-          <a href="#find">Locations</a>
-          <a href="#about">About</a>
+          <a href="#labasa">Labasa</a>
+          <a href="#savusavu">Savusavu</a>
         </div>
           <div class="dropdown-button" onclick="dropdown()">
             <i class="material-icons dropdown-button">menu</i>
@@ -39,59 +40,58 @@
           </div>
           <div class="dropdown-links">
           <a href="#menus">Menus</a>
-          <a href="#find">Locations</a>
-          <a href="#about">About</a>
+          <a href="#labasa">Labasa</a>
+          <a href="#savusavu">Savusavu</a>
         </div>
       </div>
     </nav>
 
     <main>
-      <div class="construction-msg">
-        <b>
-          !! Page under construction and incomplete. Please come back and visit soon. !!
-        </b>
-      </div>
+      <!-- make a booking -->
+
+      <button class="booking-btn" onclick="showPhNums()">Make a Booking</button>
+
       <!-- menus section -->
+      <h2 id="menus">Menus</h2>
+      <div class="underline"></div>
       <div class="container">
-        <div id="menus" class="container__content">
-          <h3>Menus</h3>
-          <div class="underline"></div>
+        <div class="container__content">
           <p>The best coffee in town and delicious smoothies.</p>
           <a href="menus/drinks.pdf" class="container__link">Drinks</a>
           <p>Delicious breakfast to start your day.</p>
           <a href="menus/breakfast.pdf" class="container__link">Breakfast</a>
           <p>Fijian, Indian and international food.</p>
-          <a href="menus/lunch.pdf" class="container__link">Main menu</a>
+          <a href="menus/main.pdf" class="container__link">Main menu</a>
         </div>
 
         <div class="container__image image-menu"></div>
       </div>
 
       <!-- services section -->
-      <div class="sub-heading">
-        <h3>Services</h3>
-        <div class="underline"></div>
-        <p>Coffee, drinks, breakfast, and lunch</p>
-      </div>
-      <div class="list">
-        <div class="list__item">
-          <img class="list__image" src="images/6-coffees.jpg" alt="img" />
+      <h2>Services</h2>
+      <div class="underline"></div>
+      <p>Coffee, drinks, food and special occasions</p>
+      <div class="services">
+        <div class="services__item">
+          <img class="services__image" src="images/6-coffees.jpg" alt="img">
           <p>Best coffee in town</p>
         </div>
-        <div class="list__item">
-          <img class="list__image" src="images/birthday.jpg" alt="img" />
+        <div class="services__item">
+          <img class="services__image" src="images/birthday.jpg" alt="img">
           <p>Orders for special occasions </p>
         </div>
-        <div class="list__item">
-          <img class="list__image" src="images/function.jpg" alt="img" />
+        <div class="services__item">
+          <img class="services__image" src="images/function.jpg" alt="img">
           <p>Catering for groups and events</p>
         </div>
       </div>
 
       <!-- promotion section -->
       <div class="container">
+        <div class="container__image image-promo"></div>
+
         <div class="container__content">
-          <h3>A taste of Fiji and the world</h3>
+          <h2>A taste of Fiji and the world</h2>
           <div class="underline"></div>
           <p>
             One family-owned company, two locations, same superb service.
@@ -102,57 +102,102 @@
             It is popular with locals and visitors for the great menu and friendly service.
           </p>
         </div>
-        <div class="container__image bg-image-2">
+      </div>
 
+      <!-- locations -->
+      <h2 id="labasa">Labasa</h2>
+      <div class="underline"></div>
+      <div class="location">
+
+        <div>
+          <div class="location__item">
+            <i class="material-icons">schedule</i>
+            <span>8am - 8pm, 7 Days</span>
+          </div>
+          <div class="location__item">
+            <i class="material-icons">add_location</i>
+            <span>Galaxy Complex, Labasa</span>
+          </div>
+          <div class="location__item">
+            <div class="location__link">
+              <a href="https://goo.gl/maps/W3WRp2yxHWgXkEPb6" target="_blank">
+                <i class="material-icons">near_me</i>
+                <span>Get directions</span>
+              </a>
+            </div>
+
+          </div>
+          <div class="location__item">
+            <div class="location__link">
+              <a href="tel:8082204">
+                <i class="material-icons">phone</i>
+                <span>Contact</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- lambasa facebook posts -->
+        <div class="fb-page"
+          data-href="https://www.facebook.com/ethanscoffee"
+          data-tabs="timeline"
+          data-width="500"
+          data-height="500"
+          data-small-header="false"
+          data-adapt-container-width="true"
+          data-hide-cover="false"
+          data-show-facepile="true"
+          data-lazy="true">
+          <blockquote cite="https://www.facebook.com/ethanscoffee" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/ethanscoffee">Ethan&#039;s Coffee Heaven</a>
+          </blockquote>
         </div>
       </div>
 
-      <!-- locations section -->
-      <div id="find" class="sub-heading">
-        <h3>Locations</h3>
-        <div class="underline"></div>
-      </div>
-
-      <div class="list">
-        <div class="list__item">
-          <h4>Labasa</h4>
-          <i class="material-icons">add_location</i>
-          <p>Galaxy Complex, Ritova Street Nasekula Road Labasa, Fiji</p>
-          <a href="https://goo.gl/maps/W3WRp2yxHWgXkEPb6" target="_blank">Get directions</a>
-          <p>
-            <a href="https://www.facebook.com/ethanscoffee" target="_blank"><img class="list__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" /></a>
-          </p>
-          <p>
-            <a href="tel:8082204">
-              <i class="material-icons">phone</i>
-            </a>
-          </p>
+      <h2 id="savusavu">Savusavu</h2>
+      <div class="underline"></div>
+      <div class="location">
+        <div>
+          <div class="location__item">
+            <i class="material-icons">schedule</i>
+            <span>8am - 8pm, 7 Days</span>
+          </div>
+          <div class="location__item">
+            <i class="material-icons">add_location</i>
+            <span>Lesiaceva Road, Savusavu</span>
+          </div>
+          <div class="location__item">
+            <div class="location__link">
+              <a href="https://goo.gl/maps/5TaNHcMp7vLTM4VM9" target="_blank">
+                <i class="material-icons">near_me</i>
+                <span>Get directions</span>
+              </a>
+            </div>
+          </div>
+          <div class="location__item">
+            <div class="location__link">
+              <a href="tel:9078562">
+                <i class="material-icons">phone</i>
+                <span>Contact</span>
+              </a>
+            </div>
+          </div>
         </div>
-
-        <div class="list__item">
-          <h4>Savusavu</h4>
-          <i class="material-icons">add_location</i>
-          <p>Lesiaceva Road Savusavu, Fiji</p>
-          <a href="https://goo.gl/maps/5TaNHcMp7vLTM4VM9" target="_blank">Get directions</a>
-          <p>
-            <p>
-              <a href="https://www.facebook.com/profile.php?id=100064196137922" target="_blank"><img class="list__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" /></a>
-            </p>
-            <a href="tel:9078562">
-              <i class="material-icons">phone</i>
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <!-- about section -->
-      <div class="background-image background-image--about image-about">
-        <div id="about" class="background-image__text text-left">
-          <h3>About us</h3>
-          <p>
-            Next level tbh everyday carry, blog copper mug forage kitsch roof party pickled hammock kale chips tofu. Etsy shoreditch 8-bit microdosing, XOXO viral butcher banh mi humblebrag listicle woke bicycle rights brunch before they sold out ramps. Twee shabby chic taiyaki flannel, enamel pin venmo vape four loko. Hexagon kale chips typewriter kitsch 8-bit organic plaid small batch keffiyeh ethical banh mi narwhal echo park cronut.
-          </p>
-        </div>
+        <!-- savusavu facebook posts -->
+          <div class="fb-page"
+            data-href="https://www.facebook.com/profile.php?id=100064196137922"
+            data-tabs="timeline"
+            data-width="500"
+            data-height="500"
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="true"
+            data-lazy="true">
+            <blockquote cite="https://www.facebook.com/profile.php?id=100064196137922" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/profile.php?id=100064196137922">Ethan’s coffee heaven</a>
+            </blockquote>
+          </div>
       </div>
     </main>
 
@@ -160,6 +205,7 @@
       <div class="social-icons">
         <a href="https://www.facebook.com/ethanscoffee" target="_blank" class="fa fa-facebook"></a>
         <a href="https://www.instagram.com/ethanscoffeeheaven/?hl=en" target="_blank" class="fa fa-instagram"></a>
+        <a href="https://www.tripadvisor.com/Restaurant_Review-g297565-d24862689-Reviews-Ethans_Coffee_Heaven-Savusavu_Vanua_Levu.html" target="_blank" class="fa fa-tripadvisor"></a>
         <a href="mailto:shareenainvestment@gmail.com" class="fa fa-envelope"></a>
       </div>
       <p>Website created for <em>Ethan's Coffee Heaven</em> by <a class="attribution--footer" href="https://github.com/michagodfrey/cafe">Michael Godfrey</a>.</p>

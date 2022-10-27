@@ -14,3 +14,9 @@ window.onclick = function(event) {
     }
   }
 }
+
+// alert
+
+function showPhNums() {
+  alert("Call -\nLambasa: 808 2204\nSavusavu: 907 8562");
+}
