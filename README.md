@@ -40,4 +40,4 @@ Fonts from [Google Fonts](https://developers.google.com/fonts).
 
 Menu, schedule, location, navigation and phone icons from [Google Icons](https://fonts.google.com/icons)
 
-Footer social icons from [Font Awesome](https://fontawesome.com/)
+Footer social icons from [Icons8](https://icons8.com).
