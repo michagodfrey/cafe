@@ -32,3 +32,7 @@ window.onclick = function(event) {
     }
   }
 }
+
+function closeMenu() {
+  document.querySelector(".dropdown-links").classList.remove("show");
+}
