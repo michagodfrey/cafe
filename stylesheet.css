@@ -6,7 +6,6 @@
   font-size: 20px;
   color: #333;
   scroll-behavior: smooth;
-
 }
 
 :root {
@@ -19,6 +18,16 @@ body {
   background-color: var(--color-background);
 }
 
+section {
+  margin: 50px 0;
+}
+
+@media (min-width: 768px) {
+  section {
+    margin: 100px 0;
+  }
+}
+
 /* =================================================
  text styles
 ==================================================== */
@@ -27,13 +36,13 @@ h1, h2 {
   font-family: 'Pacifico', cursive;
   font-weight: lighter;
   color: #333;
+  text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
 }
 
 h2 {
   font-size: 1.5rem;
   margin: 1rem 0 0;
   text-align: center;
-  text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
 }
 
 h3 {
@@ -41,40 +50,34 @@ h3 {
   color: #fff;
 }
 
-.title-mobile {
-  font-size: 1rem;
-  color: white;
+.title {
+  padding: 0 .5rem;
+  font-size: 1.5;
+  color: var(--color-primary);
 }
 
-.title-mobile span {
-  font-family: 'Gelasio', serif;
-  font-weight: lighter;
-  color: white;
-}
-
-.title-desktop {
-  display: none;
-  font-size: 1.5rem;
-  color: white;
-}
-
-.title-desktop span {
+.title span {
   font-size: 1.5rem;
   font-family: 'Gelasio', serif;
   font-weight: lighter;
   padding: .125rem .25rem 0 0;
-  color: white;
+  color: var(--color-primary);;
+}
+
+.title__caption {
+  margin: 0 1rem;
 }
 
 /* text media queries */
 
 @media (min-width: 768px) {
-  .title-mobile {
-    display: none;
+
+  .title, .title span {
+    font-size: 2.5rem;
   }
 
-  .title-desktop {
-    display: flex;
+  .title__caption {
+    font-size: 1.5rem;
   }
 
   .sub-heading {
@@ -132,7 +135,7 @@ header {
 ==================================================== */
 
 nav {
-  background-color: var(--color-primary)
+  background-color: var(--color-primary);
 }
 
 .nav-content {
@@ -145,6 +148,24 @@ nav {
 
 .nav-links {
   display: none;
+}
+
+.nav-book {
+  color: #fff;
+  padding: .25rem 1.5rem;
+  border-radius: 1rem;
+  background-color: #4C43CD;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 2px 19px 31px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: .4s linear;
+}
+
+.nav-book:hover {
+  background-color: #fff;
+  color: #4C43CD;
 }
 
 .button-container {
@@ -210,24 +231,23 @@ nav {
 
 .nav-links {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
-.nav-links a {
+.nav-links * {
   color: white;
-  margin: 0 1.25rem;
+  margin-left: 2rem;
+  font-size: 1.5rem;
+}
+
+.nav-book {
+  font-size: 1.5rem;
 }
 
 .dropdown-button {
   display: none;
 }
-}
-
-@media (min-width: 1024px) {
-  .nav-links a {
-    margin: 0 2.5rem;
-    font-size: 1.5rem;
-  }
 }
 
 /* =================================================
@@ -255,10 +275,15 @@ nav {
   border: 3px solid var(--color-primary);
   border-radius: 1rem;
   width: 80vw;
-  max-width: 500px;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.modal__content b {
+  max-width: 80%;
+  margin: auto;
 }
 
 .modal__link {
@@ -289,25 +314,6 @@ nav {
   color: #000;
 }
 
-.modal__open {
-  color: #fff;
-  padding: 1rem 1.5rem;
-  margin: 2rem;
-  border-radius: 1rem;
-  background-color: #4C43CD;
-  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 87% at 26% 20%, rgba(255, 255, 255, 0.41) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
-  box-shadow: 2px 19px 31px rgba(0, 0, 0, 0.2);
-  font-weight: bold;
-  border: 2px solid white;
-  cursor: pointer;
-  transition: .4s linear;
-}
-
-.modal__open:hover {
-  background-color: #fff;
-  color: #4C43CD;
-}
-
 .modal__close {
   font-size: 1.5rem;
   font-weight: 600;
@@ -322,11 +328,19 @@ nav {
   color: crimson;
 }
 
+.modal__desktop {
+  display: none;
+}
+
 @media (min-width: 768px){
+
   .modal__link {
-    padding: 1rem;
+    display: none;
   }
 
+  .modal__desktop {
+    display: block;
+  }
 }
 
 
@@ -417,6 +431,10 @@ main {
   padding: 1rem;
 }
 
+.location__flex {
+  padding: 1rem;
+}
+
 .location__item {
   display: flex;
   align-items: center;
@@ -440,11 +458,16 @@ main {
   width: 100%;
 }
 
+.location__item--desktop {
+  display: none;
+}
+
 .location__link {
   display: flex;
   align-items: center;
   margin: auto;
   padding: .25rem 1rem;
+  width: 250px;
   border-radius: 1rem;
   border: 2px solid var(--color-primary);
   background-color: var(--color-secondary);
@@ -462,6 +485,10 @@ main {
 
 .location__link:hover i, .location__link:hover span {
   color: var(--color-secondary);
+}
+
+.-fb-desktop {
+  display: none;
 }
 
 .fb-page {
@@ -506,8 +533,31 @@ main {
     justify-content: space-around;
   }
 
+  .location__item--desktop {
+    display: flex;
+  }
+
+  .location__item--mobile {
+    display: none;
+  }
+
+  .location__flex {
+    flex: 1 1 50%;
+  }
+
   .location__item i {
     font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .-fb-mobile {
+    display: none;
+  }
+
+  .-fb-desktop {
+    display: block;
   }
 }
 
@@ -523,7 +573,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 1rem;
+  padding: 50px;
   background: -moz-linear-gradient(top, #A0522D 0%, #502917 100%);
   background: -webkit-linear-gradient(top, #A0522D 0%, #502917 100%);
   background: linear-gradient(to bottom, #A0522D 0%, #502917 100%);
@@ -533,6 +583,7 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 footer p {
@@ -546,16 +597,15 @@ footer em {
 }
 
 footer span {
-  font-size: 4rem;
+  font-size: 1.5rem;
   color: #fff;
 }
 
-footer a svg {
-    transition: .2s linear;
+footer a img {
+  transition: .2s linear;
 }
 
-footer a svg:hover {
-
+footer a img:hover {
   transform: scale(1.1);
 }
 
@@ -574,8 +624,9 @@ footer a svg:hover {
 }
 
 @media (min-width: 768px) {
-  footer a svg {
-      width: 96px;
-      height: 96px;
+
+  footer a img {
+      width: 72px;
+      height: 72px;
   }
 }

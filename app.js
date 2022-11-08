@@ -1,8 +1,8 @@
-// booking modal
+// booking modal mobile screen
 const modal = document.querySelector('.modal');
 const modalClose = document.querySelector('.modal__close');
 
-function openMoodal() {
+function openModal() {
   modal.style.display = "grid";
 }
 
