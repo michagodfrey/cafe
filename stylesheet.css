@@ -588,7 +588,6 @@ footer {
 
 footer p {
   margin-bottom: 0;
-  font-size: .75rem;
   color: white;
 }
 
@@ -614,11 +613,9 @@ footer a img:hover {
   flex-direction: column;
   color: #fff;
   text-decoration: none;
-  font-size: .75rem;
 }
 
 .attribution, .attribution a {
-  font-size: .75rem;
   color: white;
   margin: 2rem 0 1rem;
 }
