@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Best coffee in Labasa and Savusavu! Ethan's Coffee Heaven is a family run cafe business in Vanua Levu, Fiji. View menus and make a booking.">
     <meta name="author" content="Michael Godfrey">
+    <meta http-equiv="Cache-control" content="public">
 
     <!-- facebook open graph tags -->
     <meta property="og:url"                content="https://ethanscoffeeheaven.com/">
@@ -17,14 +18,24 @@
     <link rel="canonical" href="https://ethanscoffeeheaven.com/">
     <link rel="icon" type="image/x-icon" href="images/icons8-coffee-32.png">
     <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="app.js" defer></script>
     <!-- embedded facebook pages scripy -->
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v15.0" nonce="LDFc83V6"></script>
   </head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5W30L8RGZD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-5W30L8RGZD');
+  </script>
+  
   <body>
 
     <header>
@@ -111,15 +122,15 @@
         <p><b>Coffee</b>, smoothies, food and catering to <b>special occasions</b></p>
         <div class="services">
           <div class="services__item">
-            <img class="services__image" src="images/services-coffee.jpg" alt="six freshly brewed coffees">
+            <img class="services__image" src="images/services-coffee.jpg" loading="lazy" alt="six freshly brewed coffees" height="200" width="200">
             <p>Best coffee in town</p>
           </div>
           <div class="services__item">
-            <img class="services__image" src="images/services-event.jpg" alt="happy 21st birthday with slice of cake">
+            <img class="services__image" src="images/services-event.jpg" loading="lazy" alt="happy 21st birthday with slice of cake" height="200" width="200">
             <p>Orders for special occasions </p>
           </div>
           <div class="services__item">
-            <img class="services__image" src="images/services-group.jpg" alt="group of people seated at table">
+            <img class="services__image" src="images/services-group.jpg" loading="lazy" alt="group of people seated at table" height="200" width="200">
             <p>Catering for groups and events</p>
           </div>
         </div>
@@ -314,24 +325,22 @@
       <div class="social-icons">
         <!-- labasa social -->
         <a class="footer-icon" href="https://www.facebook.com/ethanscoffee">
-          <img src="images/svgs/facebook.svg" alt="facebook logo for Labasa store">
-          Lbs
+          <img src="images/svgs/facebook.svg" loading="lazy" alt="facebook logo for Labasa store">
         </a>
 
         <a href="https://www.instagram.com/ethanscoffeeheaven/?hl=en">
-          <img src="images/svgs/instagram.svg" alt="instagram logo for Labasa store">
+          <img src="images/svgs/instagram.svg" loading="lazy" alt="instagram logo for Labasa store">
         </a>
 
         <span>/</span>
 
         <!-- savusavu social -->
         <a class="footer-icon"  href="https://www.facebook.com/profile.php?id=100064196137922">
-          <img src="images/svgs/facebook.svg" alt="facebook logo for Savusavu store">
-          Ssv
+          <img src="images/svgs/facebook.svg" loading="lazy" alt="facebook logo for Savusavu store">
         </a>
 
         <a href="https://www.tripadvisor.com/Restaurant_Review-g297565-d24862689-Reviews-Ethans_Coffee_Heaven-Savusavu_Vanua_Levu.html">
-          <img src="images/svgs/tripadvisor.svg" alt="tripadvisor logo for Savusavu store">
+          <img src="images/svgs/tripadvisor.svg" loading="lazy" alt="tripadvisor logo for Savusavu store">
         </a>
 
       </div>
