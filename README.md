@@ -1,6 +1,8 @@
 # Ethan's Coffee Heaven
 
-This is the repository for the Cafe [Ethan's Coffee Heaven](https://www.ethanscoffeeheaven.com). A small catering business in Fiji.
+This is the former repository for the Cafe [Ethan's Coffee Heaven](https://www.ethanscoffeeheaven.com). A small catering business in Fiji.
+
+The new repository is [here](https://github.com/michagodfrey/ethans).
 
 ## Overview
 
